@@ -253,10 +253,10 @@ footer .footer_column p {
 	text-transform: uppercase;
 	font-weight: bolder;
 	letter-spacing: 2px;
-	border: 2px solid #ffffff;
-	color: #0099cc;
+	border: 2px solid #0099cc;
+	color: #ffffff;
 	transition: all 0.3s linear;
-	background-color: #ffffff;
+	background-color: #0099cc;
 }
 .button:hover {
 	background-color: #FEFEFE;
