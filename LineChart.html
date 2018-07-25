@@ -26,14 +26,14 @@
 	<button id="addData">Add Data</button>
 	<button id="removeData">Remove Data</button>
 	<script>
-		var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+		var MONTHS = ['All Levels', 'Entry', 'Mid', 'Senior', 'Executive', 'C-Suite'];
 		var config = {
 			type: 'line',
 			data: {
-				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				labels: ['All Levels', 'Entry', 'Mid', 'Senior', 'Executive', 'C-Suite'],
 				datasets: [{
 					label: 'My First dataset',
-					borderColor: window.chartColors.red,
+					borderColor: window.chartColors.red;
 					backgroundColor: window.chartColors.red,
 					data: [
 						randomScalingFactor(),
