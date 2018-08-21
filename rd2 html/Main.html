@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>GIAC</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" href="../html/assets/img/favicon.png" type="image/png" sizes="16x16">
+    <link href="../html/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../html/assets/custom-icons/custom-icons.css" rel="stylesheet">
+    <link href="../html/assets/css/slick.css" rel="stylesheet">
+    <link href="../html/assets/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="../html/assets/css/ion.rangeSlider.skinHTML5.css" rel="stylesheet">
+    <link href="../html/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-6">
+                        <div class="navbar-header">
+                            <a class="logo show-in-desktop" href=""><img src="../html/assets/img/logo.png" alt=""></a>
+                            <a class="logo show-in-mobile" href=""><img src="../html/assets/img/mobile-logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-6">
+                        <div class="row">
+                            <ul class="nav navbar-nav">
+                                <!-- <li class="phone"><a href="tel:555-123-4567" class="icon"><i class="icon-whatsapp"></i></a><a href="tel:555-123-4567">(555)123.4567</a></li> -->
+                                <li><a class="btn btn-default" id="show">CONTACT US</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Popup Start Here-->
+    <section class="popup-cover">
+        <div class="content-cover">
+            <a class="close-btn" id="hide"><i class="icon-close-circular-button-symbol"></i></a>
+            <div class="container">
+                <div class="row">
+                    <div class="upper">
+                        <h3>Does your Team Have the Players It Needs for Cybersecurity Defense?</h3>
+                        <form class="questions" onsubmit="return false">
+                            <div class="content">
+                                <div class="list-question">
+                                    <div class="number"><span>1</span></div>
+                                    <h5>How large is your organization?</h5>
+                                </div>
+                                <div class="inner show-in-desktop">
+                                    <h6 class="employe-size">0-15 Employees</h6>
+                                    <div class="rang-slider">
+                                        <span class="text-left">0-15</span>
+                                        <span class="text-right">10,000+</span>
+                                        <input type="text" id="example_id" name="example_name" value="" />
+                                    </div>
+                                </div>
+                                <div class="custom-select show-in-mobile">
+                                    <select>
+                                        <option value="0">10-15 Emloyees</option>
+                                        <option value="1">15-20 Emloyees</option>
+                                        <option value="2">20-25 Emloyees</option>
+                                        <option value="3">25-30 Emloyees</option>
+                                        <option value="4">30-35 Emloyees</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="content content-two">
+                                <div class="list-question">
+                                    <div class="number"><span>2</span></div>
+                                    <h5>What industry do you operate in?</h5>
+                                </div>
+                                <div class="inner show-in-desktop">
+                                    <ul class="radio">
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" checked="checked" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Consumer Products</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Education</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Energy (Oil and Gas)</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Financial Services</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Government</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Health Care</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Manufacturing</span>
+                                            </label>
+                                        </li>
+                                         <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Power & Utilities</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Professional Services</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Technology</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Telecommunications</span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Transportation & Logistics.</span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <label class="radio-container">
+                                                <input type="radio" name="radio">
+                                                <span class="radio-checkmark"></span>
+                                                <span class="text">Other</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="custom-select show-in-mobile">
+                                    <select>
+                                        <option selected="selected">Industry</option>
+                                        <option value="1">Consumer Products</option>
+                                        <option value="2">Education</option>
+                                        <option value="3">Energy (Oil and Gas)</option>
+                                        <option value="4">Financial Services</option>
+                                        <option value="5"> Government</option>
+                                        <option value="6">Health Care</option>
+                                        <option value="7">Manufacturing</option>
+                                        <option value="8">Power & Utilities</option>
+                                        <option value="9">Professional Services</option>
+                                        <option value="10">Technology</option>
+                                        <option value="11">Telecommunications</option>
+                                        <option value="12">Transportation & Logistics.</option>
+                                        <option value="13">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="content content-three">
+                                <div class="list-question">
+                                    <div class="number"><span>3</span></div>
+                                    <h5>Who would you like to send the presentation to?</h5>
+                                </div>
+                                <div class="outer">
+                                    <span>Your Information:</span>
+                                    <div class="field-outer">
+                                        <label for="name" class="label">Name*</label>
+                                        <input type="text" name="name" class="form-control" required>
+                                    </div>
+                                    <div class="field-outer">
+                                        <label for="role" class="label">Role/Position*</label>
+                                        <input type="text" name="role" class="form-control" required>
+                                    </div>
+                                    <div class="field-outer">
+                                        <label for="email" class="label">Email*</label>
+                                        <input type="text" name="email" class="form-control" required>
+                                    </div>
+                                    <div class="btn-outer">
+                                        <button class="btn btn-primary form-submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="thankyou-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="left">
+                                <h4>Thank You!</h4>
+                                <p>We will be following up with you shortly via email, so look for your GIAC presentation in your inbox.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="right">
+                                <iframe src="https://www.slideshare.net/ThomasBall12/giac-slide-shareforlandingpage" width="100%" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Popup End Here-->
+    <div class="blue-bg">
+        <!--Banner Start Here-->
+        <section class="banner-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="content content-padding">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="left">
+                                  <h1>A Team Needs to be a Cohesive Force. Is Your Cyber Team Ready?</h1>
+                                  <p>Amazon, Allstate, Discover, Lockheed Martin, Siemens AG. What do all of these companies have in common? When hiring new cybersecurity practitioners, they look for applicants who hold a GIAC Certification. </p>
+									<p><strong>Why?</strong> Because they are enterprises that understand that the modern cyber threat is highly sophisticated. They seek candidates that are GIAC certified because they know that they will have the <strong>specialized knowledge and hands-on skills</strong> to contribute to their InfoSec force's mission of protecting and securing the modern enterprise <strong>from Day 1.</strong></p><p><strong>Recognizing, evaluating, and correcting cyber security risks</strong> across your entire organization requires a fabric of certified security managers and operators to serve as an InfoSec force. Today's leading companies recognize that a SANS trained and GIAC certified force of InfoSec analysts is the best way to guarantee the integrity of the operation.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="banner-bottom">
+                                   <!--  <img src="assets/img/hero-1.png" alt=""> -->
+                                    <iframe src="https://www.slideshare.net/slideshow/embed_code/key/c3wRN4Vcd3lDoo" width="100%" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+                                </div>
+                                <div class="ribbon">
+                                    <a class="ribbon-inner" id="show">
+										<p style = text-align: center>Download</p>
+                                        <span class="icon"><i class="icon-up-arrow"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Banner End Here-->
+        <!--Section two Start Here-->
+        <section class="section-two">
+            <div class="container">
+                <div class="row">
+                    <div class="white-bg">
+                        <div class="col-sm-3 pd-all">
+                            <div class="left">
+                                <div class="top-arrow"></div>
+                                <div class="asf-bg">
+                                    <ul>
+                                        <li>
+                                            <h3><span>1.5</span> Million</h3>
+                                            <p>By 2019, there could be 1.5 million unfulfilled cybersecurity positions</p>
+                                        </li>
+                                        <li>
+                                            <h3><span>2/3</span></h3>
+                                            <p>Two-thirds of cyber breaches are caused or enabled by employee negligence or malfeasance.</p>
+                                        </li>
+                                        <li>
+                                            <h3><span>73%</span></h3>
+                                            <p>73% of firms fail cybersecurity readiness tests</p>
+                                        </li>
+                                        <li>
+                                            <h3><span>$1.05</span> Million</h3>
+                                            <p>Large US businesses lose an average of $1.05 million to cybercrime each year.</p>
+                                        </li>
+                                        <li class="hide-block">
+                                            <h3>Only <span>18%</span></h3>
+                                            <p>of cyber attacks are driven directly by an external threat</p>
+                                        </li>
+                                        <li class="hide-block">
+                                            <h3><span>51%</span></h3>
+                                            <p>of large American firms are still rated as unprepared to defend themselves against cybersecurity risk"</p>
+                                        </li>
+
+                                    </ul>
+                                    <!-- <button class="more-content">show more</button> -->
+                                </div>
+                                <div class="bottom-arrow"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 pd-all">
+                            <div class="right">
+                                <div class="upper">
+                                    <div class="content">
+                                      <h2>GIAC Certified. Cyber Ready.<span class="show-in-desktop">On Day One.</span></h2>
+                                      <span class="show-in-mobile mobile">Cyber Ready.</span>
+                                      <h4>Explore Certifications and Resources</h4>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <ul class="cyber-slider">
+                                        <li>
+                                            <div class="icon"><i class="icon-fingerprint2"></i></div>
+                                            <h5><a href="https://www.giac.org/certifications/cyber-defense"><strong>Cyber Defense</strong></a></h5>
+                                            <p>The essential skills and techniques needed to protect and secure an organization’s critical information assets, business systems, and industrial controls</p>
+                                        </li>
+                                        <li>
+                                            <div class="icon"><i class="icon-contract1"></i></div>
+                                            <h5><a href="https://www.giac.org/certifications/pen-testing"><strong>Penetration Testing</strong></a></h5>
+                                            <p>The identification and assessment of potential attacks and vulnerabilities, and implementation of defenses and immediate responses to contain, mitigate, and remediate risks.</p>
+                                        </li>
+                                        <li>
+                                            <div class="icon"><i class="icon-smartphone"></i></div>
+                                            <h5><a href="https://www.giac.org/certifications/digital-forensics"><strong>Digital Forensics, Incident Response, Threat Hunting</strong></strong></a></h5>
+                                            <p>The acquisition and examination of evidence from digital systems to find and recover known artifacts essential to information and systems security.</p>
+                                        </li>
+                                        <li class="hide-block">
+                                            <div class="icon"><i class="icon-settings"></i></div>
+                                            <h5><a href="https://www.giac.org/certifications/management"><strong>Management, Legal, and Audit</strong></a></h5>
+                                            <p>The leadership and management of security teams and risk analysis techniques to conduct a technical audit of essential information systems. </p>
+                                        </li>
+                                        <li class="hide-block">
+                                            <div class="icon"><i class="icon-mobile-phone"></i></div>
+                                            <h5><a href="https://www.giac.org/certifications/software-security"><strong>Application Security</strong></a></h5>
+                                            <p>The design, development, and defense of secure application software and systems.</p>
+                                        </li>
+										<li class="hide-block">
+                                            <div class="icon"><i class="icon-contract1"></i></div>
+                                            <h5><a href="https://www.giac.org/certifications/ics"><strong>Industrial Control Systems</strong></a></h5>
+                                            <p>The design, development, and defense of secure application software and systems.</p>
+                                        </li>
+
+                                    </ul>
+                                    <div class="btn-outer show-in-desktop">
+                                      <button class="btn btn-default more-certi">show more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section two End Here-->
+    </div>
+    <!--Section Three End Here-->
+    <section class="section-three show-in-desktop">
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <h2>GIAC ROADMAP</h2>
+                     <img src="../html/assets/img/roadmap-1.jpeg" class="show-in-desktop" alt="roadmap">
+                    <!-- <img src="assets/img/roadmap-2.png" class="show-in-mobile" alt="roadmap">
+                    <img src="assets/img/roadmap-3.png" class="show-in-mobile" alt="roadmap">
+                    <img src="assets/img/roadmap-4.png" class="show-in-mobile" alt="roadmap">
+                    <img src="assets/img/roadmap-5.png" class="show-in-mobile" alt="roadmap"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section Three Start Here-->
+    <!--Section Four Start Here-->
+    <section class="section-four">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 pd-left">
+                    <h2>About GIAC</h2>
+                </div>
+                <div class="col-sm-9">
+                    <p>
+                        GIAC understands the growing threat facing the modern global enterprise in an increasingly data dependent world and continues to adapt its portfolio of 30+ certifications to assure that a professional’s mastery of cyber security knowledge can be applied directly to meet the cross organizational information security challenges of enterprise, defense and public sector organizations around the world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section Four End Here-->
+    <!--Section Five Start Here-->
+    <section class="section-five">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 pd-left">
+                    <div class="left">
+                        <h2>contact us</h2>
+                        <p>The identification and assessment of potential attacks and vulnerabilities.</p>
+                        <div class="btn-outer show-in-mobile">
+                            <a href="" class="btn btn-primary">CONTACT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5 pd-all show-in-desktop">
+                    <div class="middel">
+                        <div class="field-outer">
+                            <label for="firstname" class="label">First Name*</label>
+                            <input type="text" name="First-Name" class="form-control">
+                        </div>
+                        <div class="field-outer">
+                            <label for="lastname" class="label">Last Name*</label>
+                            <input type="text" name="Last-Name" class="form-control">
+                        </div>
+                        <div class="custom-select">
+                            <select>
+                                <option selected="selected">Industry</option>
+                                <option value="1">Consumer Products</option>
+                                <option value="2">Education</option>
+                                <option value="3">Energy (Oil and Gas)</option>
+                                <option value="4">Financial Services</option>
+                                <option value="5">Government</option>
+                                <option value="6">Health Care</option>
+                                <option value="7">Manufacturing</option>
+                                <option value="8">Power & Utilities</option>
+                                <option value="9">Professional Services</option>
+                                <option value="10">Technology</option>
+                                <option value="11">Telecommunications</option>
+                                <option value="12">Transportation & Logistics</option>
+                            </select>
+                        </div>
+                        <div class="field-outer">
+                            <label for="email" class="label">Work Email*</label>
+                            <input type="email" name="Work email" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 pd-right show-in-desktop">
+                    <div class="right">
+                        <textarea placeholder="Message"></textarea>
+                        <div class="btn-outer">
+                            <input type="submit" name="" value="Submit" class="btn btn-primary">
+                            <!-- <a href="" class="btn btn-primary">submit</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section Five End Here-->
+    <!--footer Start Here-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <a href="">
+                        <img src="../html/assets/img/footer-logo.png" class="show-in-desktop" alt="GIAC">
+                        <img src="../html/assets/img/footer-mobile.png" class="show-in-mobile" alt="GIAC">
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <div class="content">
+                        <ul class="social-media">
+                            <li><a href="">
+                                <i class="icon-linkedin-logo2"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-twitter-logo-silhouette"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-facebook-letter-logo"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="icon-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="show-in-mobile copyright">(c) GIAC 2018</span>
+                    <ul class="menu-item">
+                        <li>
+                            <a href="">Site Map</a>
+                        </li>
+                        <li>
+                            <a href="">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a href="">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="">For Investors</a>
+                        </li>
+                        <li>
+                            <a href="">For Employees</a>
+                        </li>
+                        <li>
+                            <a href="">For Suppliers</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a id="back-to-top" href="#" class="btn-lg back-to-top show" role="button" title="" data-toggle="tooltip" data-placement="left" data-original-title="Back to top"><span class="icon-download-arrow"></span></a>
+    </footer>
+    <!--footer End Here-->
+<script src="../html/assets/js/jquery-1.10.2.min.js"></script>
+<script src="../html/assets/js/bootstrap.min.js"></script>
+<script src="../html/assets/js/slick.js"></script>
+<script src="../html/assets/js/ion.rangeSlider.min.js"></script>
+<script src="../html/assets/js/scripts.js"></script>
+</body>
+
+</html>
