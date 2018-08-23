@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!-- Font goes here -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+<!-- End Font -->
+    <title>Chartpocalypse</title>
+    <meta name="robots" content="noindex">
+      <style>
+      html, body {
+        width: 100%;
+      }
+      table {
+        margin: 0 auto;
+      }
+      /* Id Driven CSS */
+
+          #statement {
+          background-color: #ffffff;
+          color: #121212;
+          padding: 0px;
+          font-size:24px;
+          border: none;
+          border-width: 0px;
+          font-family: 'Nunito Sans', sans-serif;
+          font-weight:800;}
+
+          #droppy {
+            text-align: center;
+            width: 100%;}
+
+          #toolbar2 {
+              text-align: left;
+              padding-left: 157px;
+            margin-left: 0px;
+            width: 100%;}
+
+          #thebox {
+            width: 700px;
+            height: 600px;
+            border:1px solid #d5d5d5;
+            border-radius: 5px;
+            -moz-box-shadow: 0 0 3px #ccc;
+            -webkit-box-shadow: 0 0 3px #ccc;
+            box-shadow: 0 0 3px #ccc;}
+
+          #chart_div {
+            width: 700px;
+            height: 400px;}
+            div { margin: auto; }
+
+          #chartcontainer {
+            margin: auto;
+          }
+
+          .blueblue {
+          }
+
+/* Dropdown Edits*/
+              .goog-inline-block .goog-menu-button-outer-box {
+                background-color: #ffffff;
+                color: #121212;
+                padding: 0px;
+                font-size:24px;
+                border: none;
+                border-width: 0px;
+                cursor: pointer;
+                font-family: 'Nunito Sans', sans-serif;
+                font-weight:800;}
+
+/* controls the header of the dropdown */
+              .goog-menu-button-inner-box {
+                border-width: 0px !important;
+                }
+
+              .goog-inline-block .goog-menu-button-caption:hover {
+                color: #ffc000 !important;}
+
+/* controls the text content of the dropdown */
+              .goog-menuitem-content {
+                color: #121212 !important;
+                font-family: 'Nunito Sans', sans-serif !important;
+                font-size: 24px !important;
+                padding-top: 2.5%;
+                padding-bottom: 2.5%;}
+                .goog-menuitem-content:hover {
+                  color: #ffc000 !important;}
+/* controls the style of the actual menu box */
+              .goog-menu {
+                border-color: #ffc000 !important;
+                border-width: 4px !important;
+              }
+/* Controls the selection of dropdowns */
+              .goog-menuitem {
+                background-color: white !important;
+                border-color: transparent !important;
+              }
+              .goog-menuitem:hover {
+                background-color: white !important;
+                border-color: white !important;
+              }
+              .goog-menuitem:highlight {
+                background-color: transparent !important;
+                border-color: transparent !important;
+              }
+/* Controls the dissapearence of checkmark and arrow*/
+              .goog-menuitem-checkbox { display: none !important;}
+              .goog-menu-button-dropdown {
+                height: 15px !important;
+                width: 40px !important;
+                background: url("https://78.media.tumblr.com/b86bf6b2fe38d7ae21f6f1986513f734/tumblr_pdxagxEFB51xvmga7o1_250.png")!important;
+                vertical-align: middle !important;
+                background-position: right !important;
+                background-repeat: no-repeat !important;
+                background-size: contain !important;
+              }
+
+          </style>
+  </head>
+  <body>
+    <!--load the api -->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!-- make the dashboardy-board -->
+
+<table id="thebox">
+  <tr>
+    <td style="text-align: center; padding-top: 4%;">
+              <div id="categoryPicker_div"></div>
+    </td>
+<!-- this avoids an error -->
+    <td>
+      <div id="dashboard_div" style="display: none;">
+            </td>
+  </tr>
+  <tr>
+    <td>
+              <div id="chart_div"></div>
+    </td>
+    <td>
+              <div id="table_div" style="display: none;"></div>
+    </td>
+  </tr>
+  <tr><td style="text-align: center;">
+<p id='statement'> At C-Suite level in the Technology industry,<br>alumni earn a median annual salary of $225,000.</p>  </td></tr>
+      </div>
+</table>
+
+<div id="slider_div" style="display: none;"></div>
+
+
+
+
+
+<!-- end of all the DOM stuff -->
+
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart', 'table', 'gauge', 'controls']});
+  google.charts.setOnLoadCallback(drawMainDashboard);
+
+  function drawMainDashboard() {
+    var dashboard = new google.visualization.Dashboard(
+        document.getElementById('dashboard_div'));
+    var slider = new google.visualization.ControlWrapper({
+      'controlType': 'NumberRangeFilter',
+      'containerId': 'slider_div',
+      'options': {
+        'filterColumnIndex': 2,
+        'ui': {
+          'labelStacking': 'vertical',
+          'label': 'Age Filter:',
+
+        }
+      }
+    });
+    var categoryPicker = new google.visualization.ControlWrapper({
+      'controlType': 'CategoryFilter',
+      'containerId': 'categoryPicker_div',
+      'options': {
+        'filterColumnIndex': 1,
+        'ui': {
+          'labelStacking': 'vertical',
+          'label': '',
+          'caption': 'Industry',
+          'allowTyping': false,
+          'allowMultiple': false,
+          'allowNone': false,
+          'cssClass': 'Blueblue',
+          'sortValues': false,
+        }
+      }
+    });
+
+
+
+
+    var pie = new google.visualization.ChartWrapper({
+      'chartType': 'LineChart',
+      'containerId': 'chart_div',
+      'options': {
+        'chartArea': { width: "80%", height: "70%" },
+        'hAxis': {baselineColor: '#5f5f5f', textPosition: 'out', gridlines: {color: 'transparent'}, titleTextStyle: {color: 'blue'}},
+        'width': 700,
+        'fontName': 'Nunito Sans',
+        'height': 400,
+        'vAxis': { viewWindow: { min: 0 }, format: 'currency', textPosition: 'none', baselineColor: '#5f5f5f', gridlines: {color: 'transparent'}, titleTextStyle: {color: '#121212'}},
+        'legend': 'none',
+        'series': {1: {curveType: 'function'}},
+        'crosshair': { trigger: 'both', orientation: 'horizontal', opacity: 0.2, },
+        'lineWidth': 4,
+        'interpolateNulls':true,
+        'pointSize': 5,
+        'series': {
+          0: { color: '#5f5f5f', lineDashStyle: [5, 5], lineWidth: 2, },
+          1: { color: '#ffc000' },
+          2: { color: '#5f5f5f', lineDashStyle: [5, 5], lineWidth: 2, },
+        }
+      },
+      'view': {'columns': [0, 2, 3, 4]}
+    });
+
+
+    var table = new google.visualization.ChartWrapper({
+      'chartType': 'Table',
+      'containerId': 'table_div',
+      'options': {
+      }
+    });
+    //data!
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'X');
+      data.addColumn('string', 'Industry')
+      data.addColumn('number', '25th Percentile');
+      data.addColumn('number', '50th Percentile');
+      data.addColumn('number', '75th Percentile');
+
+
+
+      data.addRows([
+        ['Entry', 'Select Industry | All Levels', 45000, 65000 , 85000],
+        ['Mid-level', 'Select Industry | All Levels', 85000, 105000 , 135000],
+        ['Senior', 'Select Industry | All Levels', 115000, 135000 , 175000],
+        ['Executive', 'Select Industry | All Levels', 135000, 185000 , 255000],
+        ['C-Suite', 'Select Industry | All Levels', 155000, 225000 , 305000],
+
+
+        ['Entry', 'Technology', 55000, 75000, 105000],
+        ['Mid-level', 'Technology', 95000, 115000, 135000],
+        ['Senior', 'Technology', 125000, 145000, 175000],
+        ['Executive', 'Technology', 155000, 195000, 255000],
+        ['C-Suite', 'Technology', 175000, 225000, 285000],
+
+        ['Entry', 'Product Services', 35000, 55000, 75000],
+        ['Mid-level', 'Product Services', 85000, 105000, 125000],
+        ['Senior', 'Product Services', 105000, 135000, 165000],
+        ['Executive', 'Product Services', 135000, 175000, 235000],
+        ['C-Suite', 'Product Services', 155000, 220000, 345000],
+
+        ['Entry', 'Manufacturing', 65000, 85000, 95000],
+        ['Mid-level', 'Manufacturing', 95000, 105000, 125000],
+        ['Senior', 'Manufacturing', 115000, 135000, 165000],
+        ['Executive', 'Manufacturing', 155000, 185000, 235000],
+        ['C-Suite', 'Manufacturing', 155000, 255000, 495000],
+
+        ['Entry', 'Healthcare / Pharma', 50000, 65000, 90000],
+        ['Mid-level', 'Healthcare / Pharma', 85000, 105000, 135000],
+        ['Senior', 'Healthcare / Pharma', 105000, 130000, 165000],
+        ['Executive', 'Healthcare / Pharma', 145000, 175000, 260000],
+        ['C-Suite', 'Healthcare / Pharma', 155000, 195000, 275000],
+
+        ['Entry', 'Government / Non-profit', 35000, 55000, 65000],
+        ['Mid-level', 'Government / Non-profit', 55000, 75000, 105000],
+        ['Senior', 'Government / Non-profit', 85000, 105000, 125000],
+        ['Executive', 'Government / Non-profit', 105000, 135000, 175000],
+        ['C-Suite', 'Government / Non-profit', 105000, 145000, 210000],
+
+        ['Entry', 'Finance / Accounting', 55000, 55000, 65000],
+        ['Mid-level', 'Finance / Accounting', 85000, 105000, 135000],
+        ['Senior', 'Finance / Accounting', 125000, 165000, 225000],
+        ['Executive', 'Finance / Accounting', 155000, 225000, 345000],
+        ['C-Suite', 'Finance / Accounting', 155000, 275000, 355000],
+
+        ['Entry', 'Energy / Utilities', 65000, 105000, 125000],
+        ['Mid-level', 'Energy / Utilities', 115000, 125000, 155000],
+        ['Senior', 'Energy / Utilities', 135000, 165000, 195000],
+        ['Executive', 'Energy / Utilities', 175000, 225000, 275000],
+        ['C-Suite', 'Energy / Utilities', 205000, 275000, 395000],
+
+        ['Entry', 'Consulting', 55000, 65000, 100000],
+        ['Mid-level', 'Consulting', 95000, 125000, 155000],
+        ['Senior', 'Consulting', 125000, 155000, 185000],
+        ['Executive', 'Consulting', 165000, 205000, 295000],
+        ['C-Suite', 'Consulting', 175000, 225000, 325000],
+
+    ]);
+    // end data!
+    dashboard.bind([slider, categoryPicker,], [pie, table]);
+    dashboard.draw(data);
+  }
+</script>
+
+
+
+
+
+
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: null, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension8&quot;: &quot;scriptsafe&quot;, &quot;dimension1&quot;: &quot;Signed out&quot;}, &quot;gaid&quot;: &quot;UA-24532603-1&quot;}">
+
+    <input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {}, &quot;gaid&quot;: &quot;UA-47037920-1&quot;}">
+
+
+
+
+
+
+    <script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "US", "language": {"requested": "en", "served": null}, "projectName": null, "scriptsafe": "scriptsafe", "signedIn": "False", "internalUser": "False"}];
+    </script>
+
+
+
+
+    <script>
+
+      window.onload = function() {
+          // Initialize the settings variables we get from the server side
+        devsite.settings.initSettings({'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'SITE_NAME': 'devsite', 'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_CLOUDTRACK': 0, 'VTAGS_ENABLED': 0, 'HISTORY_ENABLED': 1, 'SIDEBAR_MINI_ENABLED': 0, 'VERSION_HASH': '68b2778ebb', 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com', 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.appspot.com', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0} || {});
+        // DevsiteUtilParams rely on devsite.settings.
+        devsite.utils.initDevsiteUtilParams('https://google-developers.appspot.com/',
+            devsite.settings['ALLOWED_HOSTS'].concat('youtube.com'));
+        devsite.permissions.init({"f62218c009ec029abef196bba5aa34cf": true, "8de7a048f21618359bd37f5ce44be073": false, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": true, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true});
+        devsite.base.init(null, null, top, false);
+
+        devsite.analytics.InitAnalytics(true);
+
+
+      }
+
+
+    </script>
+  </body>
+</html>
